@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    .work-container {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 320px 9px 198px 9px 153px 9px 50px;
+      grid-template-rows: 414px 9px 305px 9px 20px;
+      justify-content: center;
+      align-content: center;
+    }
+
+    .gap {
+      background-color: #000;
+    }
+
+    .red {
+      background-color: #E72F24;
+    }
+
+    .blue {
+      background-color: #004592;
+    }
+
+    .yellow {
+      background-color: #F9D01E;
+    }
+
+    .black {
+      background-color: #232629;
+    }
+
+    .white {
+      background-color: #F0F1EC;
+    }
+
+    #first-vertical {
+      grid-column: 2;
+      grid-row: 1 / -1;
+    }
+
+    #second-vertical {
+      grid-column: 4;
+      grid-row: 4 / -1;
+    }
+
+    #third-vertical {
+      grid-column: 6;
+      grid-row: 2 / -1;
+    }
+
+    #first-horizontal {
+      grid-row: 2;
+      grid-column: 1 / -1;
+    }
+
+    #second-horizontal {
+      grid-row: 4;
+      grid-column: 1 / -2;
+    }
+
+    #first-box {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    #second-box {
+      grid-column: 3 / -1;
+      grid-row: 1;
+    }
+
+    #third-box {
+      grid-row: 3;
+      grid-column: 1;
+    }
+
+    #fourth-box {
+      grid-row: 3;
+      grid-column: 3 / 6;
+    }
+
+    #fifth-box {
+      grid-row: 3 / -1;
+      grid-column: span 1 / -1;
+    }
+
+    #fifth-top {
+      width: 50px;
+      height: 130px;
+      border-bottom: 10px solid #232629;
+    }
+
+    #fifth-bottom {
+      width: 50px;
+      height: 184px;
+      border-top: 10px solid #232629;
+    }
+
+    #sixth-box {
+      grid-row: 5;
+      grid-column: 1;
+    }
+
+    #seventh-box {
+      grid-column: 3;
+      grid-row: span 1 / -1;
+    }
+
+    #eighth-box {
+      grid-column: 5;
+      grid-row: span 1 / -1;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+  <div class="work-container">
+    <div id="first-vertical" class="gap"></div>
+    <div id="second-vertical" class="gap"></div>
+    <div id="third-vertical" class="gap"></div>
+    <div id="first-horizontal" class="gap"></div>
+    <div id="second-horizontal" class="gap"></div>
+
+    <div id="first-box" class="red"></div>
+    <div id="second-box" class="white"></div>
+    <div id="third-box" class="white"></div>
+    <div id="fourth-box" class="white"></div>
+    <div id="fifth-box">
+      <div id="fifth-top" class="blue"></div>
+      <div id="fifth-bottom" class="white"></div>
+    </div>
+    <div id="sixth-box" class="white"></div>
+    <div id="seventh-box" class="yellow"></div>
+    <div id="eighth-box" class="black"></div>
+  </div>
+</body>
+
+</html>
